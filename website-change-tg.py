@@ -28,7 +28,7 @@ def report_change(url):
 
     html_response = (requests.get(url)).text
     soup = bs.BeautifulSoup(html_response,'lxml')
-    txt = soup.select_one(".n-body > ul").get_text()
+    txt = soup.select_one("#forScrollNews > ul > li> a").get_text()
     notice = (re.sub(r'\n\s*\n', '\n', txt)).strip()
     
     file_name = ''.join(x for x in url if x.isalpha()) + ".txt"
