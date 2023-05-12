@@ -9,7 +9,7 @@ RUN pip3 install -U pip
 
 RUN cd /
 
-RUN git clone https://github.com/mkasajim/web-to-telegram-bot
+RUN git clone https://github.com/craziks-creator/web-to-telegram-bot
 
 RUN cd web-to-telegram-bot
 
