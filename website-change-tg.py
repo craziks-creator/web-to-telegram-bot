@@ -28,7 +28,7 @@ def report_change(url):
 
     html_response = (requests.get(url)).text
     soup = bs.BeautifulSoup(html_response,'lxml')
-    txt = soup.select_one("p.English > a").get_text()
+    txt = soup.select_one("p.English > a").get("href")
     notice = txt
     
     file_name = ''.join(x for x in url if x.isalpha()) + ".txt"
